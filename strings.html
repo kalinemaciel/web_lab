@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Strings</title>
+    <style>
+        body {font: 14pt Arial;}
+        button {font-size: 14pt; padding: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Manipulação de Strings</h1>
+    <button onclick="inicio()">Iniciar</button>
+    <section id="resultado">
+        <p></p>
+    </section>
+    <script>
+        function inicio(){ 
+        let str = window.prompt("Informe a string inicial");
+        let res = document.querySelector('section#resultado');
+        let caracteres = window.prompt("Informe caracteres para concatenar");
+        let posicao = Number(window.prompt("Informe posição"));
+
+        resposta = str.length;
+        res.innerHTML = `<p>Tamanho da String [${str}] é: ${resposta}</p>`;
+
+        resposta = str.substring(0,5);
+        res.innerHTML = res.innerHTML + `<p>Substring de [${str}] entre 0 e 5: ${resposta}</p>`;
+
+        resposta = str.replace('X', '-');
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Substituida: ${resposta}</p>`;
+
+        resposta = str.replace(/X/g, '-');
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Substituida com regex: ${resposta}</p>`;
+
+        resposta = str.toUpperCase();
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Maiúsculas: ${resposta}</p>`;
+
+        resposta = str.toLowerCase();
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Minúsculas: ${resposta}</p>`;
+
+        resposta = str.concat(str, caracteres);
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Concatenada: ${resposta}</p>`;
+
+        resposta = str.trim();
+        res.innerHTML = res.innerHTML + `<p>Original [${str}] Sem espaços brancos: ${resposta}</p>`;
+        
+        resposta = str.charAt(posicao);
+        res.innerHTML = res.innerHTML + `<p>Caractere nas posicao [${posicao}]: ${resposta}</p>`;
+
+        resposta = str.charCodeAt(posicao);
+        res.innerHTML = res.innerHTML + `<p>Caractere UNICODE posicao [${posicao}]: ${resposta}</p>`;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+    
+

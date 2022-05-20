@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMC</title>
+    <style>
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ff1493;
+    border-radius: 1em;
+}
+fieldset {
+    border: 1px solid #ff1493;
+}
+
+input {
+    border: 1px solid #ff1493;
+}
+button {
+    margin-top: 2%;
+    background-color: #CCBBFF;
+    border: 1px solid #845BFF;
+}
+title {
+    font-family: sans-serif;
+}
+
+    </style>
+</head>
+<body>
+    <form accept-charset="UTF-8" autocomplete="off" method="GET">
+        <fieldset>
+            <legend>Calculadora de IMC</legend>
+            <label>Seu peso</label><br>
+            <input name="peso" type="text" id="peso"> <br> 
+            <label>Sua altura</label><br>
+            <input name="altura" type="text" id="altura"> <br> 
+    
+            <button onclick="calcula()">Calcular</button>
+        </fieldset>
+    </form>
+    <script>  
+    function calcula(){
+        peso = Number(document.getElementById("peso").value);
+        altura = Number(document.getElementById("altura").value);
+        imc = peso / (altura * altura);
+
+        if (imc <= 18.5){
+            classificacao = "abaixo do peso";
+        } else if (imc <= 25) {
+            classificacao = "peso normal";
+        } else if (imc <= 30) {
+            classificacao = "acima do peso";
+        }
+        window.alert(`O seu IMC é ${imc} - ${classificacao}`);
+    }
+
+    </script>
+</body>
+</html>

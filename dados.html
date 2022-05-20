@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dados</title>
+    <style>
+        body {font: 14pt Arial;}
+        button {font-size: 14pt; padding: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Manipulação de Dados</h1>
+    <button onclick="inicio()">Iniciar</button>
+    <section id="resultado"><p></p></section>
+    <script>
+        function inicio() {
+        let anoNasc = window.prompt('Informe o ano do seu nascimento ')
+        let res = document.querySelector('section#resultado')
+        const d = new Date();
+        const days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+        diaSemana = days[d.getDay()];
+        hh = dataFormatada = new Date().toLocaleDateString();
+        hh = d.getHours();
+        mm = d.getMinutes();
+        ss = d.getSeconds();
+
+        let ano = d.getFullYear();
+
+        let idade = ano - anoNasc;
+
+        res.innerHTML = `<p>${diaSemana} - ${dataFormatada} - ${hh}:${mm}:${ss} </p>`;
+        res.innerHTML = res.innerHTML + `<p>Quem nasceu em ${anoNasc} vai completar <strong>${idade}</strong> anos em ${ano}</p>`;        
+}
+
+    </script>
+</body>
+</html>

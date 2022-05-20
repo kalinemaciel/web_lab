@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+    <title>Formulário</title>
+</head>
+<body>
+    <style type="text/css">
+        .second-form {
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .in-label {
+            font-weight: 100;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 15px;
+        }
+
+        .buttons button {
+            margin-left: 5px;
+        }
+    </style>
+    <div>
+        <h1 id="title">Formulário para Submissão de Trabalhos</h1>
+        <br>
+    </div>
+
+    <form class="first-form">
+
+        <fieldset style="width: 550px">
+            <legend id="authors">Autores</legend>
+        <div class="campo">
+            <label for="name">Nome:</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <br>
+        <div class="campo">
+            <label for="number">CPF:</label>
+            <input id="number" type="tel" name="number">
+        </div> 
+        <br>
+        <div class="campo">
+            <label for="name">Autor 1:</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <br>
+        <div class="campo">
+            <label for="name">Autor 2:</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <br>
+        <div class="campo">
+            <label for="name">Autor 3:</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <br>
+        <div class="campo"> 
+            <label for="name">Autor 4:</label>
+            <input id="name" type="text" name="name">
+        </div>
+        <br>
+        <div class="campo">
+            <label for="name">Autor 5:</label>
+            <input id="name" type="text" name="name">
+        </fieldset>
+
+    </form>
+    <form class="second-form">
+
+        <fieldset style="width: 550px">
+            <legend id="data">Dados do trabalho</legend>
+            <div class="campo">
+                <label>Título</label>
+                <textarea id="name" type="text" name="name" cols="40" rows="3"></textarea>
+            </div> 
+            <div class="campo">
+                <br>
+                <label for="area">Área do conhecimento</label>
+                <input id="area" type="text" name="area">
+            </div class="campo">
+            <br> 
+            <div class="campo">
+              <label for="keyword">Palavras chave</label>
+              <input id="keyword" type="text" name="keyword">
+          </div>
+          <br>
+          <div class="campo">
+              <label >Modalidade</label>
+              <input id="resume" type="radio" name="modal">
+              <label class="in-label" for="modal">Resumo</label>
+              <input id="complete" type="radio" name="modal">
+              <label class="in-label" for="modal">Completo</label>
+          </div>
+          <br>  
+          <div class="campo">
+              <label>Tipo:</label>
+              <input id="grad" type="radio" name="tipo" value="grad">
+              <label class="in-label" for="modal">Graduação</label>
+              <input id="pgrad" type="radio" name="tipo" value="pgrad">
+              <label class="in-label" for="modal">Pós-graduação</label>
+              <input id="outros" type="radio" name="tipo" value="outros">
+              <label class="in-label" for="modal">Outros</label>
+          </div>
+          <br>
+          <div class="presentation">
+              <label>Apresentação:</label>
+              <input id="oral" type="checkbox" name="apres" value="apres">
+              <label class="in-label" for="apres">Oral</label>
+              <input id="poster" type="checkbox" name="tipo" value="poster">
+              <label class="in-label" for="apres">Pôster</label>
+          </div>
+          <br>
+          <div class="file">
+              <input id="file" type="file" name="file">
+              <label class="in-label" for="file">(Tamanho máximo 2.0 Mb)</label>
+          </div> 
+          <br>
+          <div class="buttons">
+              <button type="submit">Enviar</button>
+              <button type="reset">Limpar</button>
+          </div> 
+        </fieldset>
+    </form>
+    
+</body>
+</html>
